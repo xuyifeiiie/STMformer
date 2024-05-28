@@ -10,7 +10,7 @@ This repository is for STMformer, a model for system state forecasting tasks of 
 
 Install dependencies for the project.
 
-```python
+```shell
 pip install -r requirements.txt
 ```
 
@@ -18,18 +18,9 @@ pip install -r requirements.txt
 
 ---
 
-1. You can download our processed dataset from [[Baidu Drive]]() and place the processed dataset into folder ```./data```
+1. You can download our raw data from [[Baidu Drive]]()，and place the category-level folder of data into ```./data```. For example, put the normal-15-2h-5s folder in the ```./data```.
 
-2. Use following commands to train and evaluate model.  
-
-   ```shell
-   cd exp
-   python ./exp_forecasting_aiops.py
-   ```
-
-3. You can customize experiment settings and alter model in the ```./config/TrainTicket_short_term_forecast.conf```
-
-4. Horizon steps could be set. You can use the following commands to generate dataset for different prediction steps.
+2. Then generating and normalizing dataset locally. Horizon steps could be set during dataset generation. You can use the following commands to generate dataset for different prediction steps.
 
    ```shell
    cd data
@@ -41,6 +32,13 @@ pip install -r requirements.txt
    python ./dataset_normalization.py
    ```
 
-   And don't forget to change the setting in the ```./config/TrainTicket_short_term_forecast.conf```.
+3. Don't forget change the settings when you alter the steps. You can also customize experiment settings and select model in the ```./config/TrainTicket_short_term_forecast.conf```.
+
+4. Use following commands to train and evaluate model.  
+
+   ```shell
+   cd exp
+   python ./exp_forecasting_aiops.py
+   ```
 
    
