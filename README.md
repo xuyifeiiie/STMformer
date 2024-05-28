@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 3. You can customize experiment settings and alter model in the ```./config/TrainTicket_short_term_forecast.conf```
 
-4. Default horizon steps is 16. You can use the following commands to generate dataset for different prediction steps.
+4. Horizon steps could be set. You can use the following commands to generate dataset for different prediction steps.
 
    ```shell
    cd data
@@ -40,5 +40,7 @@ pip install -r requirements.txt
    # normalize dataset
    python ./dataset_normalization.py
    ```
+
+   And don't forget to change the setting in the ```./config/TrainTicket_short_term_forecast.conf```.
 
    
